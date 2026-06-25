@@ -8,6 +8,8 @@ import { AuditLogsModule } from '../audit-logs/audit-logs.module';
 import { ReportsModule } from './reports/reports.module';
 import { DataRequest } from '../users/entities/data-request.entity';
 import { TransactionLimitsModule } from '../transactions/transaction-limits.module';
+import { AdminMessagingController } from './admin-messaging.controller';
+import { MessagingModule } from '../messaging/messaging.module';
 
 @Module({
   imports: [
@@ -15,8 +17,9 @@ import { TransactionLimitsModule } from '../transactions/transaction-limits.modu
     AuditLogsModule,
     ReportsModule,
     TransactionLimitsModule,
+    MessagingModule,
   ],
-  controllers: [AdminController],
+  controllers: [AdminController, AdminMessagingController],
   providers: [AdminService],
 })
 export class AdminModule {}

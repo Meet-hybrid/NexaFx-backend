@@ -35,6 +35,8 @@ import { RateAlertsModule } from './rate-alerts/rate-alerts.module';
 import { LedgerModule } from './ledger/ledger.module';
 import { UsersModule } from './users/users.module';
 
+import { MessagingModule } from './messaging/messaging.module';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -96,6 +98,7 @@ import { UsersModule } from './users/users.module';
     WalletsModule,
     LedgerModule,
     UsersModule,
+    MessagingModule,
   ],
   controllers: [AppController],
   providers: [
